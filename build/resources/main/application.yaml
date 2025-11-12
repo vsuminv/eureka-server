@@ -1,0 +1,35 @@
+#server:
+#  port: 3150
+#
+#spring:
+#  application:
+#    name: eureka-server
+#
+#  eureka:
+#    instance:
+#      hostname : localhost
+#    client:
+#      #유레카 서버에 등록 ㅇ나 함
+#      register-with-eureka: false
+#      #
+#      fetch-registry: false
+#      service-url:
+#        defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+server:
+  port: 3150
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  instance:
+    prefer-ip-address: false
+    hostname: localhost
+
+  client:
+    register-with-eureka: false   # 자신을 다른 서버에 등록하지 않음
+    fetch-registry: false         # 다른 서버의 등록 정보를 가져오지 않음
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
