@@ -26,7 +26,7 @@ spring:
 eureka:
   instance:
     prefer-ip-address: false
-    hostname: localhost
+    hostname: eureka-server
 
   client:
     register-with-eureka: false   # 자신을 다른 서버에 등록하지 않음
